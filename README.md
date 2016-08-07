@@ -12,7 +12,7 @@ The following `docker-compose.yml` would sync the `code` folder width Apache `ht
 
 ```yaml
 http:
-  image: http
+  image: deployerpt/http
   ports:
     - "80:80"
   volumes:
