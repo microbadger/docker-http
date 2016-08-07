@@ -2,7 +2,9 @@ FROM ubuntu:16.04
 MAINTAINER Vitor Hugo <info@deployer.pt>
 
 # install Apache
-RUN apt-get update && apt-get install -y apache2
+RUN apt-get update && \
+    apt-get install -y apache2 && \
+    rm -rf /var/lib/apt/lists/*
 
 # start Apache
 RUN service apache2 start
